@@ -1,0 +1,10 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "command": {
+    "council": {
+      "template": "The Gentleman's Council is now in session.\n\nThe following matter has been brought before the council for deliberation:\n\n$ARGUMENTS\n\nConvene the council and follow the full deliberation protocol.",
+      "description": "Convene The Gentleman's Council — four distinct personalities deliberate on any topic",
+      "agent": "council-chair"
+    }
+  }
+}
