@@ -66,7 +66,7 @@ For each member, use the following prompt template (substituting their name and 
 ```
 Round 1 of The Gentleman's Council. Topic: "<topic>"
 
-You are <Name>, a member of the council. Give your opening take on this topic. Speak in your natural voice — your personality, your perspective, your manner. Be authentic. 2-3 paragraphs.
+You are <Name>, a member of the council. Give your opening take on this topic. Speak in your natural voice — your personality, your perspective, your manner. Be authentic. 2-3 paragraphs. Be concrete — name a specific dish, restaurant, or actionable plan.
 
 After you've formed your thoughts, use the Write tool to save your full opening statement to: <base>/<timestamp>-r1-<name-slug>.md
 
