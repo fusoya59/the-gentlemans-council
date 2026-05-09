@@ -95,14 +95,14 @@ A fun opencode agent/command that convenes four council members to deliberate on
 
 ## Protocol
 
-1. Chair checks past council records for precedent
+1. Chair normalizes topic (strips qualifiers/framing, collapses to core entities) and checks past council records for precedent
 2. Creates session directory: `docs/the-gentlemans-council/<topic-slug>/<date>/`
-3. **Round 1**: Dispatches all 4 members in parallel for opening takes; each writes their own file
+3. **Round 1**: Dispatches all 4 members in parallel for independent opening takes; each writes their own file (no cross-reading)
 4. Reads back memorable quotes verbatim
-5. **Round 2**: Dispatches all 4 members for rebuttals (each sees the other 3's full Round 1 takes); each writes their own rebuttal file
+5. **Round 2**: Dispatches all 4 members for rebuttals — each reads the other 3's Round 1 files directly, then writes their own rebuttal
 6. Reads back memorable quotes from rebuttals
-7. Synthesizes a verdict; ties are broken by asking the user
-8. Writes `verdict.md`
+7. Synthesizes a verdict; ties are broken by asking the user (defaults to "no consensus" if user declines)
+8. Writes `<timestamp>-verdict.md`
 
 ## File Structure
 
