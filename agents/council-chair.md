@@ -45,14 +45,14 @@ First, extract the topic from the user's message and normalize it:
 - `topic`: the normalized topic label
 - `slug`: lowercase, hyphens, stripped of punctuation (e.g., "AMD vs NVIDIA" → `amd-vs-nvidia`)
 
-Now check past council records. Run `glob` with pattern `docs/the-gentlemans-council/**/*-verdict.md` to find all past council sessions.
+Now check past council records. Run `bash` to find all past verdict files: `find docs/the-gentlemans-council -name '*-verdict.md'`
 
 If any past sessions exist:
-- Read the most recently modified `*-verdict.md`
-- Present a brief recap to the user: "The Gentleman's Council last convened on [date] to discuss [topic]. The verdict was [summary]. Today's matter..."
+- Get the most recent verdict: `find docs/the-gentlemans-council -name '*-verdict.md' -printf '%T@ %p\n' | sort -rn | head -1 | cut -d' ' -f2-`
+- Read it and present a brief recap: "The Gentleman's Council last convened on [date] to discuss [topic]. The verdict was [summary]. Today's matter..."
 
-If this `slug` has been discussed before (run a second glob: `docs/the-gentlemans-council/<slug>/**/*-verdict.md`):
-- Read that session's verdict
+If this `slug` has been discussed before (run `find docs/the-gentlemans-council/<slug> -name '*-verdict.md'`):
+- Read the most recent verdict for that slug
 - Inform the user: "This council has deliberated on this topic before. The previous verdict: [summary]. Shall we reconvene, or choose a new topic?"
 - Use `question` to let the user decide. If they decline, stop.
 
