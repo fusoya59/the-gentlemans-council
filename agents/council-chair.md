@@ -113,19 +113,20 @@ From each file, extract **1-2 memorable lines or quotes** — the sharpest, funn
 
 Dispatch all 4 council members **in parallel** again.
 
-For each member, provide the paths to the other three members' Round 1 files (not their own). Build 4 distinct prompts:
+For each member, provide the paths to all four Round 1 files (their own + the other three). Build 4 distinct prompts:
 
 ```
 Round 2 of The Gentleman's Council. Topic: "<topic>"
 
-Read the other council members' Round 1 statements from these files (use the Read tool):
+First, read your own Round 1 statement to re-establish your position:
+- <base>/<timestamp>-r1-<this-member>.md
+
+Then read the other council members' Round 1 statements:
 - <base>/<timestamp>-r1-<other-member-1>.md
 - <base>/<timestamp>-r1-<other-member-2>.md
 - <base>/<timestamp>-r1-<other-member-3>.md
 
-(Exclude <base>/<timestamp>-r1-<this-member>.md — that's yours.)
-
-Respond to their takes. Agree, disagree, counter-argue, roast, or praise. Stay in character. 2-3 paragraphs.
+Now respond to their takes. You may stand firm, concede a point, shift your position, or fully change your mind. Do not feel bound by your Round 1 stance — good-faith deliberation means being open to persuasion. Stay in character. 2-3 paragraphs.
 
 The directory <base> already exists. Do not create any directories.
 
